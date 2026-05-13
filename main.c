@@ -14,7 +14,6 @@ int main(){
     int contJogador=0;
 
     while (1){
-        printf("====BLACKJACK 21====\n\n");
         //DEALER
         //printf("Dealer: ");
         int valor = 1 + rand() % 10;
@@ -62,6 +61,7 @@ int main(){
             
             //Turno Player
             if (con==1){
+                printf("====BLACKJACK 21====\n\n");
                 printf("Dealer: ");
                 for (i=0;i<contDealer-1;i++){
                     printf("[%d] ", maoDealer[i]);
@@ -78,11 +78,11 @@ int main(){
                 printf("\n\n");
 
                 if (jogador == 21){
-                    printf("PLAYER - BLACKJACK!!");
+                    printf("PLAYER - BLACKJACK!!\n");
                     break;
                 }
                 if (jogador > 21){
-                    printf("O Player estorou a rodada!");
+                    printf("O Player estorou a rodada!\n");
                     break;
                 }
 
@@ -116,7 +116,7 @@ int main(){
             
             //Turno Dealer
             if (con == 2){
-                
+                printf("====BLACKJACK 21====\n\n");
                 printf("Dealer: ");
                 for (i=0;i<contDealer;i++){
                     printf("[%d] ", maoDealer[i]);
@@ -133,7 +133,7 @@ int main(){
                 printf("\n\n");
 
                 if (dealer == 21){
-                    printf("DEALER - BLACKJACK!!");
+                    printf("DEALER - BLACKJACK!!\n");
                     break;
                 }
                 if (dealer > 21){
@@ -160,5 +160,6 @@ int main(){
         }
         break;
     }
+    system("pause");
     return 0;
 }
