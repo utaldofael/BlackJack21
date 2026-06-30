@@ -14,7 +14,7 @@ int con = 1;
 
 int main(){
     srand(time(NULL));
-
+    
 //Start
     while (1){
     //Gerar cartas aleatórias pro Dealer e Player
