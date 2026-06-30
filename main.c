@@ -191,7 +191,7 @@ int main(){
                 printf("\n\n\n\n\n");
                 
             //Puxar nova carta pro dealer(e colocar no descarte logo após)
-                int valor = 1 + rand() % 10;
+                valor = 1 + rand() % 10;
                 dealer += valor;
                 descarte[i] = valor;
                 maoDealer[contDealer] = valor;
