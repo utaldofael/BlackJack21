@@ -2,20 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 //A lib <time.h> serve pra gerar valores aleatórios com o srand()
+int descarte[52];
+int i=0;
+int dealer=0;
+int jogador=0;
+int maoDealer[21];
+int maoJogador[21];
+int contDealer=0;
+int contJogador=0;
+int con = 1;
 
 int main(){
     srand(time(NULL));
-    int descarte[52];
-    int i=0;
-    int dealer=0;
-    int jogador=0;
-    int maoDealer[21];
-    int maoJogador[21];
-    int contDealer=0;
-    int contJogador=0;
 
-//Gerar cartas aleatórias pro Dealer e Player
+//Start
     while (1){
+    //Gerar cartas aleatórias pro Dealer e Player
     //DEALER
         //printf("Dealer: ");
         int valor = 1 + rand() % 10;
@@ -51,16 +53,9 @@ int main(){
         //printf("[%d]\n", valor);
 
 
-
-        int con = 1;
+    //Início da partida
         while(con){
 
-
-            
-
-
-            
-            
         //Turno Player
         //Menu Player
             if (con==1){
