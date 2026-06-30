@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+//A lib <time.h> serve pra gerar valores aleatórios com o srand()
 
 int main(){
     srand(time(NULL));
@@ -13,8 +14,9 @@ int main(){
     int contDealer=0;
     int contJogador=0;
 
+//Gerar cartas aleatórias pro Dealer e Player
     while (1){
-        //DEALER
+    //DEALER
         //printf("Dealer: ");
         int valor = 1 + rand() % 10;
         dealer += valor;
@@ -31,7 +33,7 @@ int main(){
         contDealer++;
         //printf("[%d]\n", valor);
 
-        //PLAYER
+    //PLAYER
         //printf("Jogador: ");
         valor = 1 + rand() % 10;
         jogador += valor;
@@ -59,9 +61,10 @@ int main(){
 
             
             
-            //Turno Player
+        //Turno Player
+        //Menu Player
             if (con==1){
-                printf("====BLACKJACK 21====\n\n");
+                printf("=====21=====\n\n");
                 printf("Dealer: ");
                 for (i=0;i<contDealer-1;i++){
                     printf("[%d] ", maoDealer[i]);
@@ -76,21 +79,26 @@ int main(){
                 }
                 printf("- Total = %d", jogador);
                 printf("\n\n");
+        //Final Menu Player
 
+            //Verificar se player deu BJ
                 if (jogador == 21){
                     printf("PLAYER - BLACKJACK!!\n");
                     break;
                 }
+            //Verificar se Player estorou
                 if (jogador > 21){
                     printf("O Player estorou a rodada!\n");
                     break;
                 }
-
+            //Msg de escolha
                 char escolha[1];
                 printf("\nStand - Hit - Double\n");
                 scanf(" %c", &escolha[0]);
                 getchar();
+
                 
+            //Fazer escolha - STAND / HIT / DOUBLE
                 switch (escolha[0]){
                     case 's':
                         con = 2;
@@ -111,12 +119,14 @@ int main(){
                     default:
                         break;
                 }
+            //Final da escolha
                 printf("\n\n\n\n\n");
             }
             
-            //Turno Dealer
+        //Turno Dealer
             if (con == 2){
-                printf("====BLACKJACK 21====\n\n");
+            //Menu Dealer
+                printf("=====21=====\n\n");
                 printf("Dealer: ");
                 for (i=0;i<contDealer;i++){
                     printf("[%d] ", maoDealer[i]);
@@ -131,7 +141,8 @@ int main(){
                 }
                 printf("- Total = %d", jogador);
                 printf("\n\n");
-
+            //Final Menu Dealer
+            //Validar se Dealer BJ, se não BJ ou se perdeu pro Player
                 if (dealer == 21){
                     printf("DEALER - BLACKJACK!!\n");
                     break;
@@ -149,7 +160,9 @@ int main(){
 
                 printf("Continuar...");
                 getchar();
+                printf("\n\n\n\n\n");
                 
+            //Puxar nova carta pro dealer(e colocar no descarte logo após)
                 int valor = 1 + rand() % 10;
                 dealer += valor;
                 descarte[i] = valor;
