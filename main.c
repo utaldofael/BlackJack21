@@ -160,7 +160,15 @@ int main(){
                     printf("Player venceu!!!");
                     break;
                 }
-
+                if (dealer == jogador){
+                    char empate;
+                    printf("Jogo empatado! O dealer deseja empatar? (S/N)\n");
+                    scanf(" %c", &empate);
+                    if (empate == 's' || empate == 'S') {
+                        printf("Dealer empatou o jogo!\n");
+                        break;
+                    }
+                }
                 if (dealer > jogador){
                     printf("Dealer - Venceu!\n");
                     break;
