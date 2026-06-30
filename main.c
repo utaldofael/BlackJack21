@@ -48,6 +48,29 @@ void menuDealer(){
     printf("\n\n");
 }
 
+void setPlay(){
+    switch (escolha[0]){
+        case 's':
+            con = 2;
+            break;
+        case 'h':
+            valor = 1 + rand() % 10;
+            jogador += valor;
+            descarte[i] = valor;
+            maoJogador[contJogador] = valor;
+            i++;
+            contJogador++;
+            
+            break;
+        case 'd':
+            /* code */
+            break;
+        
+        default:
+            break;
+    }
+}
+
 int main(){
     srand(time(NULL));
     
