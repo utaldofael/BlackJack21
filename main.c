@@ -116,23 +116,9 @@ int main(){
         while(con){
 
         //Turno Player
-        //Menu Player
             if (con==1){
-                printf("=====21=====\n\n");
-                printf("Dealer: ");
-                for (i=0;i<contDealer-1;i++){
-                    printf("[%d] ", maoDealer[i]);
-                }
-                printf("[*]");
-                printf("\n\n");
-
-
-                printf("Player: ");
-                for (i=0;i<contJogador;i++){
-                    printf("[%d] ", maoJogador[i]);
-                }
-                printf("- Total = %d", jogador);
-                printf("\n\n");
+            //Menu Player
+                menuPlayer();
         //Final Menu Player
 
             //Verificar se player deu BJ
