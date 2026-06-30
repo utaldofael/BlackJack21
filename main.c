@@ -15,7 +15,7 @@ int con = 1;
 char escolha[1];
 
 void menuPlayer(){
-    printf("=====21=====\n\n");
+    printf("==========21==========\n\n");
     printf("Dealer: ");
     for (i=0;i<contDealer-1;i++){
         printf("[%d] ", maoDealer[i]);
@@ -33,7 +33,7 @@ void menuPlayer(){
 }
 
 void menuDealer(){
-    printf("=====21=====\n\n");
+    printf("==========21==========\n\n");
     printf("Dealer: ");
     for (i=0;i<contDealer;i++){
         printf("[%d] ", maoDealer[i]);
