@@ -159,6 +159,7 @@ int main(){
                     default:
                         break;
                 }
+                
             //Final da escolha
                 printf("\n\n\n\n\n");
             }
@@ -166,21 +167,7 @@ int main(){
         //Turno Dealer
             if (con == 2){
             //Menu Dealer
-                printf("=====21=====\n\n");
-                printf("Dealer: ");
-                for (i=0;i<contDealer;i++){
-                    printf("[%d] ", maoDealer[i]);
-                }
-                printf("- Total = %d", dealer);
-                printf("\n\n");
-
-
-                printf("Player: ");
-                for (i=0;i<contJogador;i++){
-                    printf("[%d] ", maoJogador[i]);
-                }
-                printf("- Total = %d", jogador);
-                printf("\n\n");
+                menuDealer();
             //Final Menu Dealer
             //Validar se Dealer BJ, se não BJ ou se perdeu pro Player
                 if (dealer == 21){
