@@ -150,7 +150,7 @@ int main(){
             //Menu Dealer
                 menuDealer();
             //Final Menu Dealer
-            //Validar se Dealer BJ, se não BJ ou se perdeu pro Player
+            //Validar se Dealer BJ, se estorou, se empatou ou se perdeu pro Player
                 if (dealer == 21){
                     printf("DEALER - BLACKJACK!!\n");
                     break;
