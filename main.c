@@ -140,27 +140,7 @@ int main(){
 
                 
             //Fazer escolha - STAND / HIT / DOUBLE
-                switch (escolha[0]){
-                    case 's':
-                        con = 2;
-                        break;
-                    case 'h':
-                        valor = 1 + rand() % 10;
-                        jogador += valor;
-                        descarte[i] = valor;
-                        maoJogador[contJogador] = valor;
-                        i++;
-                        contJogador++;
-                        
-                        break;
-                    case 'd':
-                        /* code */
-                        break;
-                    
-                    default:
-                        break;
-                }
-                
+                setPlay();
             //Final da escolha
                 printf("\n\n\n\n\n");
             }
