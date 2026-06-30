@@ -10,7 +10,9 @@ int maoDealer[21];
 int maoJogador[21];
 int contDealer=0;
 int contJogador=0;
+int valor;
 int con = 1;
+char escolha[1];
 
 void menuPlayer(){
     printf("=====21=====\n\n");
@@ -79,7 +81,7 @@ int main(){
     //Gerar cartas aleatórias pro Dealer e Player
     //DEALER
         //printf("Dealer: ");
-        int valor = 1 + rand() % 10;
+        valor = 1 + rand() % 10;
         dealer += valor;
         descarte[i] = valor;
         maoDealer[contDealer] = valor;
@@ -119,7 +121,7 @@ int main(){
             if (con==1){
             //Menu Player
                 menuPlayer();
-        //Final Menu Player
+            //Final Menu Player
 
             //Verificar se player deu BJ
                 if (jogador == 21){
@@ -132,7 +134,6 @@ int main(){
                     break;
                 }
             //Msg de escolha
-                char escolha[1];
                 printf("\nStand - Hit - Double\n");
                 scanf(" %c", &escolha[0]);
                 getchar();
