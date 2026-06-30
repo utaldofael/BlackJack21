@@ -12,6 +12,42 @@ int contDealer=0;
 int contJogador=0;
 int con = 1;
 
+void menuPlayer(){
+    printf("=====21=====\n\n");
+    printf("Dealer: ");
+    for (i=0;i<contDealer-1;i++){
+        printf("[%d] ", maoDealer[i]);
+    }
+    printf("[*]");
+    printf("\n\n");
+
+
+    printf("Player: ");
+    for (i=0;i<contJogador;i++){
+        printf("[%d] ", maoJogador[i]);
+    }
+    printf("- Total = %d", jogador);
+    printf("\n\n");
+}
+
+void menuDealer(){
+    printf("=====21=====\n\n");
+    printf("Dealer: ");
+    for (i=0;i<contDealer;i++){
+        printf("[%d] ", maoDealer[i]);
+    }
+    printf("- Total = %d", dealer);
+    printf("\n\n");
+
+
+    printf("Player: ");
+    for (i=0;i<contJogador;i++){
+        printf("[%d] ", maoJogador[i]);
+    }
+    printf("- Total = %d", jogador);
+    printf("\n\n");
+}
+
 int main(){
     srand(time(NULL));
     
